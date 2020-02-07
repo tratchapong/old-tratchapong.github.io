@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My telephone book</title>
 <style>
+body {
+    margin : 20px;
+}
 table, td {
     border : 1px grey dashed;
     border-collapse : collapse;
@@ -15,10 +18,16 @@ table, td {
 a {
     color : brown;
 }
+td:first-child{
+    width : 40%;
+}
+td:last-child{
+
+}
 </style>
 </head>
 <body>
-    <table>
+    <table style="width:50%;">
         <tr>
             <td><b>Name</b></td>
             <td><b>Tel no.</b></td>
@@ -28,8 +37,16 @@ a {
             <td><a href="tel:0834284942">083-4284942</a></td>
         </tr>
         <tr>
-            <td>Pizza http-equiv</td>
+            <td>KFC</td>
+            <td><a href="tel:1150">1150</a></td>
+        </tr>
+        <tr>
+            <td>Pizza Hut</td>
             <td><a href="tel:1112">1112</a></td>
+        </tr>
+        <tr>
+            <td>Yayoi-ยาโยอิ</td>
+            <td><a href="tel:1642">1642</a></td>
         </tr>
     </table>
 </body>
