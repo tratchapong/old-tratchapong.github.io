@@ -1,14 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile of Ratchapong T.</title>
+<title>My Blog Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: gold;
+  margin-bottom: 10px ;
+  height: 150px;
+  padding: 10px;
+  text-align: right;
+  font-size: 35px;
+  color: whitesmoke;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 25%;
+  height: 42vw; /* only for demonstration, should be removed */
+  background-color: royalblue;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li a {
+  color: white;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 74%;
+  background-color: #f1f1f1;
+  color : midnightblue;
+  height: 42vw; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color:gold;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: right;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
 <body>
-    <img src="rt.png" style="float:left;">
-    <br>
+
+<header>
+  <img src="avatar.png" style="float:left;">
+  <h3>Ratchapong T.</h3>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">My Profile</a></li>
+      <li><a href="friends.html">My Friends</a></li>
+      <li><a href="#">My Phonebook</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <img src="rt.png" style="float:left; margin-right:3%;">
+    <div style="margin-left:20%; color:darkslateblue;">
     <hr>
     <p>My Name : Ratchapong</p>
     <p>Last Name : Tantipantarak</p>
@@ -16,8 +105,13 @@
     <p>Age : 47 </p>
     <p>Master degree of Computer Science (TU)</p>
     <hr>
-    <a href="index.html">home</a>
-    <strong>&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
-    <a href="friends.html">my friends</a>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p style="font-size: 80%;">Copyright <sup>&copy;</sup> by Ratchapong T.<sup>&reg;</sup></p>
+</footer>
+
 </body>
 </html>

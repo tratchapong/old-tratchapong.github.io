@@ -1,20 +1,116 @@
-<html>
-    <head>
-        <title>My profile in Codecamp#5 website</title>
-    </head>
-    <body>
-        <img src="the-quotes-6.jpg" style="float:left; padding-right: 10px; width: 50vw">
-        <br>
-        <hr>
-        <img src="yellow-surface-122458.jpg" style="width: 30vw; height:10px;">
-        <p style="color:darkred; font-size: xx-large;">ความอดทนที่มีวุฒิภาวะ..ไม่ใช่แค่การรู้จักการรอคอย</p>
-        <p style="color:darkred; font-size: xx-large;">หากคือการรักษาทัศนคติที่ดีตลอดการรอคอยนั้น</p>
-        <img src="yellow-surface-122458.jpg" style="width: 30vw; height:10px;">
-        <br>
-        <hr>
-        <a href="profile.html">my profile</a>
-        <strong>&nbsp;&nbsp;|&nbsp;&nbsp;</strong>
-        <a href="friends.html">my friends</a>
-        <br>
-    </body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<title>My Blog Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: gold;
+  margin-bottom: 10px ;
+  height: 150px;
+  padding: 10px;
+  text-align: right;
+  font-size: 35px;
+  color: whitesmoke;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 25%;
+  height: 42vw; /* only for demonstration, should be removed */
+  background-color: royalblue;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li a {
+  color: white;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 74%;
+  background-color: #f1f1f1;
+  color : midnightblue;
+  height: 42vw; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color:gold;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: right;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="avatar.png" style="float:left;">
+  <h3>Ratchapong T.</h3>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="profile.html">My Profile</a></li>
+      <li><a href="friends.html">My Friends</a></li>
+      <li><a href="#">My Phonebook</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <img src="waiting.jpg" style="float:left; width:300px; margin:3%; margin-left:5%">
+    <!-- <h1 style="font-size: 300%;">วลีประทับใจ...</h1> -->
+    <h2 style="font-size: 200%; font-family: 'Segoe UI'; padding-top: 10px; margin-top:8%;"><em>Patience is not the ability to wait, <br><br>
+      But the ability to KEEP A GOOD ATTITUDE while waiting</em></h2>
+      <hr>
+      <p style="font-size: 200%; margin-top:40px; margin-left:5%">
+        ความอดทนที่มีวุฒิภาวะ..ไม่ใช่แค่การรู้จักการรอคอย<br><br>
+        หากคือการรักษาทัศนคติที่ดีตลอดการรอคอยนั้น
+      </p>
+  </article>
+</section>
+
+<footer>
+  <p style="font-size: 80%;">Copyright <sup>&copy;</sup> by Ratchapong T.<sup>&reg;</sup></p>
+</footer>
+
+</body>
 </html>
