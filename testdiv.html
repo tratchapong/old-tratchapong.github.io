@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Div for any case</title>
+<style>
+  #container {
+    width : 70%;
+    height : auto;
+    border : 1px dotted red;
+    position : absolute;
+    top : 20%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+  }
+  .floatbox {
+    float: left;
+    border: 1px dashed green;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin : 0px;
+    padding : 0px;
+    overflow: visible;
+  }
+  .bluetheme {
+    border: 1px solid gray;
+    color: white;
+    background-color: blue;
+  }
+  .clear {
+    clear : left;
+  }
+  .movethen {
+    position : relative;
+    left : 20px;
+    top : 20px;
+  }
+</style>
+
+</head>
+<body>
+  <div id="container">
+  <div class="floatbox">
+    Box1
+  </div>
+  
+  <div class="floatbox">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quam voluptates voluptate, minus inventore dicta aut sequi corrupti vero, architecto accusamus placeat optio sed deserunt error iste odio, excepturi tenetur?
+  </div>
+  <div class="floatbox movethen">
+    Box3
+  </div>
+  <div class="floatbox bluetheme">
+    Box4
+  </div>
+  <div class="floatbox">
+    Box5
+  </div>
+  <div class="floatbox">
+    Box6
+  </div>
+</div>
+
+
+</body>
+</html>
