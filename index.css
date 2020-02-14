@@ -62,6 +62,10 @@ header {
   width: 25%;
 }
 
+.tablink:focus{
+   outline: none;
+}
+
 .tablink:hover {
   background-color: #777;
 }
