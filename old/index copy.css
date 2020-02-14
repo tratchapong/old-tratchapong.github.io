@@ -33,19 +33,19 @@ header {
 }
 #h-text1 {
    float: left;
-   position : relative;
-   top : -15%;
-   left : 1%;
-   font-size: 7vh;
+   position : absolute;
+   top : -2px;
+   left : 150px;
+   font-size: 60px;
    color: lightgrey;
    z-index: 1;
 }
 #h-text2 {
    float: left;
-   position : relative;
-   top : 35%;
-   left : -3%;
-   font-size: 5vh;
+   position : absolute;
+   top : 25px;
+   left : 400px;
+   font-size: 60px;
    color: black;
    z-index: 0;
 }
