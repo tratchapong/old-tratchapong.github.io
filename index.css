@@ -31,15 +31,24 @@ header {
    padding: 10px;
    /* box-shadow: 5px 10px #888888; */
 }
-#h-text {
+#h-text1 {
    float: left;
    position : absolute;
-   top : 30px;
+   top : -2px;
    left : 150px;
    font-size: 60px;
-   color: #777;
+   color: lightgrey;
+   z-index: 1;
 }
-
+#h-text2 {
+   float: left;
+   position : absolute;
+   top : 25px;
+   left : 400px;
+   font-size: 60px;
+   color: black;
+   z-index: 0;
+}
 /* Style tab links */
 .tablink {
   background-color: #555;
