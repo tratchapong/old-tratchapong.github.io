@@ -1,116 +1,59 @@
 <!DOCTYPE html>
-<html lang="th">
+<html>
 <head>
-<title>My Blog Example</title>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: gold;
-  margin-bottom: 10px ;
-  height: 150px;
-  padding: 10px;
-  text-align: right;
-  font-size: 35px;
-  color: whitesmoke;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 25%;
-  height: 42vw; /* only for demonstration, should be removed */
-  background-color: royalblue;
-  padding: 20px;
-  margin-right: 10px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li a {
-  color: white;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 74%;
-  background-color: #f1f1f1;
-  color : midnightblue;
-  height: 42vw; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color:gold;
-  padding: 10px;
-  margin-top: 10px;
-  text-align: right;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-
 <header>
-  <img src="avatar.png" style="float:left;">
-  <h3>Ratchapong T.</h3>
+    <div id="v-hdiv"></div>
+    <div id="h-img"></div>
+    <div id="h-text">Ratchapong Tantipantarak</div>
 </header>
+<button class="tablink" onclick="openPage('Home', this, 'orange')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'orange')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="profile.html">My Profile</a></li>
-      <li><a href="friends.html">My Friends</a></li>
-      <li><a href="telno.html">My Phonebook</a></li>
-    </ul>
-  </nav>
-  
-  <article>
-    <img src="waiting.jpg" style="float:left; width:300px; margin:3%; margin-left:5%">
-    <!-- <h1 style="font-size: 300%;">วลีประทับใจ...</h1> -->
-    <h2 style="font-size: 200%; font-family: 'Segoe UI'; padding-top: 10px; margin-top:8%;"><em>Patience is not the ability to wait, <br><br>
-      But the ability to KEEP A GOOD ATTITUDE while waiting</em></h2>
-      <hr>
-      <p style="font-size: 200%; margin-top:40px; margin-left:5%">
-        ความอดทนที่มีวุฒิภาวะ..ไม่ใช่แค่การรู้จักการรอคอย<br><br>
-        หากคือการรักษาทัศนคติที่ดีตลอดการรอคอยนั้น
-      </p>
-  </article>
-</section>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
 
-<footer>
-  <p style="font-size: 80%;">Copyright <sup>&copy;</sup> by Ratchapong T.<sup>&reg;</sup></p>
-</footer>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
 
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+</html> 
