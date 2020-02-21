@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery post</title>
+  <link rel="stylesheet" href="jq-hw.css.css">
+  <script src="jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#post-btn").click(function() {
+        $(this).animate({ fontSize : '100%' });
+
+      });
+    })
+  </script>
+
+</head>
+<body>
+  <div id="p-ctn">
+    <span id="title-post">New post..ready</span>
+  </div>
+  <div id="p-ctn">
+    <textarea id='post' rows=7 cols=75 ></textarea>
+  </div>
+  <div id="p-ctn">
+    <span>Image : </span>
+    <input type="text" id="inpic">
+  </div>
+  <div id="p-ctn">
+    <button id="post-btn">Post</button>
+  </div>
+
+  
+
+  
+  
+</body>
+</html>
