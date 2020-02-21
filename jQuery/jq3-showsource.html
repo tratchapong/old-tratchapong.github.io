@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.4.1.min.js"></script>
+    <title>Show HTML source</title>
+    <script>
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $("#t1").text($("html").html());
+                // alert($("html").html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="bt1">showHTML source code</button>
+    <p id="p1">Code show here</p>
+    <textarea id="t1"></textarea>
+</body>
+</html>
