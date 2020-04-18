@@ -7,15 +7,6 @@
   <title>jQuery post</title>
   <link rel="stylesheet" href="jq-hw.css">
   <script src="jquery-3.4.1.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("#post-btn").click(function() {
-        $(this).animate({ fontSize : '100%' });
-
-      });
-    })
-  </script>
-
 </head>
 <body>
   <div id="p-ctn">
@@ -31,10 +22,22 @@
   <div id="p-ctn">
     <button id="post-btn">Post</button>
   </div>
+<br><br>
+  <div id="f-area"> 
+    
+  </div>
 
   
 
   
   
 </body>
+<script>
+  $((function() {
+    $("#post-btn").click(function() {
+      $(this).animate({ fontSize : '100%' });
+
+    });
+  })
+</script>
 </html>

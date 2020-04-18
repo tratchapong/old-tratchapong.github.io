@@ -39,7 +39,12 @@ body {
   cursor: pointer;
 }
 
-
+#f-area{
+  display : flex;
+  /* justify-content: center; */
+  border : 1px dashed grey;
+  width : 600px;
+}
 
 
 
