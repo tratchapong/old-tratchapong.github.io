@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<!-- <header>
+    <div id="v-hdiv"></div>
+    <div id="h-img"></div>
+    <div id="h-text1">Ratchapong</div>
+    <div id="h-text2">Tantipantarak</div>
+</header> -->
+<button class="tablink" onclick="openPage('I_am', this, 'orange')">I&nbsp;am...</button>
+<button class="tablink" onclick="openPage('Home', this, 'orange')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'orange')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="I_am" class="tabcontent">
+
+</div>
+<div id="Home" class="tabcontent">
+
+</div>
+
+<div id="News" class="tabcontent">
+
+</div>
+
+<div id="Contact" class="tabcontent">
+
+</div>
+
+<div id="About" class="tabcontent">
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+  $(document).ready(function(){
+    var sel = '#' + pageName
+    $(sel).load(pageName+'.html'); 
+  })
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

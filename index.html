@@ -1,66 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="index.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <title>Covid-19 status in Thailand (Daily)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="./fetch-covid.js"></script>
 </head>
 <body>
-<!-- <header>
-    <div id="v-hdiv"></div>
-    <div id="h-img"></div>
-    <div id="h-text1">Ratchapong</div>
-    <div id="h-text2">Tantipantarak</div>
-</header> -->
-<button class="tablink" onclick="openPage('I_am', this, 'orange')">I&nbsp;am...</button>
-<button class="tablink" onclick="openPage('Home', this, 'orange')">Home</button>
-<button class="tablink" onclick="openPage('News', this, 'orange')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-
-<div id="I_am" class="tabcontent">
-
-</div>
-<div id="Home" class="tabcontent">
-
-</div>
-
-<div id="News" class="tabcontent">
-
-</div>
-
-<div id="Contact" class="tabcontent">
-
-</div>
-
-<div id="About" class="tabcontent">
-
+ 
+<div class="container">
+  <h4>ข้อมูล Covid19 รายวัน</h4>
+  <div class="card bg-primary text-white">
+    <div class="card-body" id="NewConfirmed">ยอดวันนี้ :</div>
+  </div>
+  <br>
+  <div class="card bg-info text-white">
+    <div class="card-body" id="Confirmed">ยอดรวม :</div>
+  </div>
+  <br>
+  <div class="card bg-success text-white">
+    <div class="card-body" id="Recovered">รักษาหาย :</div>
+  </div>
+  <br>
+  <div class="card bg-danger text-white">
+    <div class="card-body" id="Deaths">เสียชีวิต :</div>
+  </div>
+  <br>
+  <div class="card bg-secondary text-white">
+    <div class="card-body" id="UpdateDate">update ล่าสุด :</div>
+  </div>
+  <br>
+  
 </div>
 
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-
-  $(document).ready(function(){
-    var sel = '#' + pageName
-    $(sel).load(pageName+'.html'); 
-  })
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
 </body>
-</html> 
+</html>
