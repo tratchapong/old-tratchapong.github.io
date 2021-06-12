@@ -1,5 +1,5 @@
 
-const url = 'https://covid19.th-stat.com/api/open/today'
+const url = 'https://covid19.th-stat.com/json/covid19v2/getTodayCases.json'
 let data
 
 fetch(url).then( resp => resp.json() ).then( d => {
