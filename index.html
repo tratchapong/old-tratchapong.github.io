@@ -4,10 +4,12 @@
   <title>Covid-19 status in Thailand (Daily)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+  crossorigin="anonymous"
+  />
   <script src="./fetch-covid.js"></script>
 </head>
 <body>
@@ -26,28 +28,46 @@
   </ul>
 </nav>
  
-<div class="container">
-  <h4>ข้อมูล Covid19 รายวัน</h4>
-  <div class="card bg-primary text-white">
+<div class="container my-3">
+  <h4 id="UpdateDate">ข้อมูล Covid19 ประจำวัน : </h4>
+  <div class="card bg-primary text-white my-3">
     <div class="card-body" id="NewConfirmed">ยอดวันนี้ :</div>
   </div>
-  <br>
-  <div class="card bg-info text-white">
+
+  <div class="card bg-secondary text-white my-3">
+    <div class="card-body" id="NewHospitalized">รับรักษาวันนี้ :</div>
+  </div>
+
+  <div class="card bg-secondary text-white my-3">
+    <div class="card-body" id="active">รักษาอยู่ :</div>
+  </div>
+
+  <div class="card bg-warning text-white my-3">
+    <div class="card-body" id="critical">ผู้ป่วยหนัก :</div>
+  </div>
+
+  <div class="card bg-success text-white my-3">
+    <div class="card-body" id="todayRecovered">รักษาหายวันนี้ :</div>
+  </div>
+
+  <div class="card bg-danger text-white my-3">
+    <div class="card-body" id="todayDeaths">เสียชีวิตวันนี้ :</div>
+  </div>
+
+  <h4>ข้อมูล Covid19 ยอดรวม</h4>
+  <div class="card bg-info text-white my-3">
     <div class="card-body" id="Confirmed">ยอดรวม :</div>
   </div>
-  <br>
-  <div class="card bg-success text-white">
+
+  <div class="card bg-success text-white my-3">
     <div class="card-body" id="Recovered">รักษาหาย :</div>
   </div>
-  <br>
-  <div class="card bg-danger text-white">
+
+  <div class="card bg-danger text-white my-3">
     <div class="card-body" id="Deaths">เสียชีวิต :</div>
   </div>
-  <br>
-  <div class="card bg-secondary text-white">
-    <div class="card-body" id="UpdateDate">update ล่าสุด :</div>
-  </div>
-  <br>
+
+
   
 </div>
 
