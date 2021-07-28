@@ -8,10 +8,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
   fetch(url).then( resp => resp.json() ).then( d => {
     data=d 
     for(let key in d) {
-    console.log(`${key} : ${d[key]}`)
-    if(document.getElementById(key) !== null)
-      document.getElementById(key).innerHTML += ` <b>${d[key]}</b>`
+    // console.log(`${key} : ${d[key]}`)
+    if(key ==="UpdateDate") {
+      document.getElementById("UpdateDate").innerHTML += ` ${d["UpdateDate"].split(" ")[0]}`
     }
+    else if(document.getElementById(key) !== null)
+      document.getElementById(key).innerHTML += ` <b>${d[key]}</b>`
+  }
   })
   
 })
